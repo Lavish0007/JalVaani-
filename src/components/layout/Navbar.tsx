@@ -1,18 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, LogIn, Bell } from 'lucide-react';
+import { Menu, X, LogIn, Bell, Trash2 } from 'lucide-react';
+import { getNotifications, removeNotification, clearNotifications as clearAllNotifications, Notification as NotifType } from '../../services/notificationService';
 import Logo from '../shared/Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHindi, setIsHindi] = useState(false);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
+  const [notifications, setNotifications] = useState<NotifType[]>([]);
+  const [clearAll, setClearAll] = useState(false);
 
-  // sample notifications (replace with real data later)
-  const notifications = [
-    { id: 1, text: 'New weather alert for your area' },
-    { id: 2, text: 'Planner updated for Rice crop' },
-  ];
+  useEffect(() => {
+    setNotifications(getNotifications());
+  }, []);
+
+  useEffect(() => {
+    if (clearAll) {
+      clearAllNotifications();
+      setNotifications([]);
+      setClearAll(false);
+      setIsNotifOpen(false);
+    }
+  }, [clearAll]);
+
+  const handleRemove = (id: string) => {
+    removeNotification(id);
+    setNotifications(getNotifications());
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -68,12 +83,41 @@ const Navbar = () => {
               </button>
 
               {isNotifOpen && (
-                <div className="absolute right-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg z-50">
-                  <div className="p-2">
-                    <h4 className="text-sm font-semibold mb-2">Notifications</h4>
-                    <ul>
+                <div className="absolute right-0 mt-2 w-80 bg-white text-gray-800 rounded-md shadow-lg z-50">
+                  <div className="p-3">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-sm font-semibold">Notifications</h4>
+                      <div className="flex items-center space-x-2">
+                        <label className="flex items-center text-xs">
+                          <input
+                            type="checkbox"
+                            className="mr-1"
+                            checked={clearAll}
+                            onChange={(e) => setClearAll(e.target.checked)}
+                          />
+                          Clear all
+                        </label>
+                        <button
+                          onClick={() => { clearAllNotifications(); setNotifications([]); }}
+                          className="p-1 rounded hover:bg-gray-100"
+                          title="Clear all"
+                        >
+                          <Trash2 className="h-4 w-4 text-gray-600" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <ul className="mt-2 max-h-48 overflow-auto">
+                      {notifications.length === 0 && (
+                        <li className="text-sm text-gray-500 py-2">No notifications</li>
+                      )}
                       {notifications.map(n => (
-                        <li key={n.id} className="text-sm py-1 border-b last:border-b-0">{n.text}</li>
+                        <li key={n.id} className="flex items-start justify-between py-2 border-b last:border-b-0">
+                          <div className="text-sm pr-2">{n.village ? (<><span className="font-semibold">{n.village}:</span> </>) : null}{n.text}</div>
+                          <div className="flex items-center">
+                            <button onClick={() => handleRemove(n.id)} className="text-xs text-gray-500 hover:text-gray-800">Dismiss</button>
+                          </div>
+                        </li>
                       ))}
                     </ul>
                   </div>

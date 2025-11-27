@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import { addNotification } from '../services/notificationService';
 import { Eye, EyeOff, User, Key } from 'lucide-react';
 
 const Login = () => {
@@ -52,6 +53,10 @@ const Login = () => {
       console.log('Login attempt with:', formData);
       
       // Simulate successful login
+      // add a welcome-back notification
+      try {
+        addNotification({ text: `Welcome back, ${formData.username}! Your planner has new recommendations.` });
+      } catch {}
       navigate('/planner');
     }
   };

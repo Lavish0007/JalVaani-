@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import { addNotification } from '../services/notificationService';
 import { Eye, EyeOff, User, Key, Map, MapPin, Sprout } from 'lucide-react';
 
 const Signup = () => {
@@ -139,6 +140,12 @@ const Signup = () => {
       
       // Simulate successful signup
       alert('Signup successful! Please login with your new credentials.');
+      // add a village-specific notification for the new user
+      try {
+        addNotification({ text: `Welcome ${formData.name}! New village advisory for ${formData.city}: heavy rain expected tomorrow.`, village: formData.city });
+      } catch (e) {
+        // ignore
+      }
       navigate('/login');
     }
   };
