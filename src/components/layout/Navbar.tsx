@@ -73,8 +73,20 @@ const Navbar = () => {
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Notification icon */}
+          <div className="hidden md:flex items-center space-x-2">
+            <Link to="/" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Home</Link>
+            <Link to="/about" className="px-3 py-2 text-green-900 hover:text-green-600 transition">About</Link>
+            <Link to="/weather" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Weather</Link>
+            <Link to="/planner" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Planner</Link>
+            
+            <button
+              onClick={toggleLanguage}
+              className="px-3 py-2 text-green-900 hover:text-green-600 transition"
+            >
+              {isHindi ? 'English' : 'हिंदी'}
+            </button>
+
+            {/* Notification bell */}
             <div className="relative">
               <button
                 onClick={() => setIsNotifOpen(!isNotifOpen)}
@@ -131,30 +143,76 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <Link to="/" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Home</Link>
-            <Link to="/about" className="px-3 py-2 text-green-900 hover:text-green-600 transition">About</Link>
-            <Link to="/weather" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Weather</Link>
-            <Link to="/planner" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Planner</Link>
-            
-            <button
-              onClick={toggleLanguage}
-              className="px-3 py-2 text-green-900 hover:text-green-600 transition"
-            >
-              {isHindi ? 'English' : 'हिंदी'}
-            </button>
             
             <Link 
               to="/login" 
-              className="ml-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition flex items-center"
+              className="ml-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition flex items-center"
             >
               <LogIn className="mr-1 h-4 w-4" />
               Login / Signup
             </Link>
           </div>
           
-          
-          <div className="md:hidden flex items-center">
-            <button onClick={toggleMenu} className="text-gray-600 hover:text-blue-600 focus:outline-none">
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Mobile notification bell */}
+            <div className="relative">
+              <button
+                onClick={() => setIsNotifOpen(!isNotifOpen)}
+                aria-label="Notifications"
+                className="p-2 rounded-full text-green-900 hover:text-green-600 transition focus:outline-none"
+              >
+                <Bell className="h-5 w-5" />
+                {notifications.length > 0 && (
+                  <span className="absolute -top-1 -right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-600 rounded-full">
+                    {notifications.length}
+                  </span>
+                )}
+              </button>
+
+              {isNotifOpen && (
+                <div className="absolute right-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg z-50">
+                  <div className="p-3">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-sm font-semibold">Notifications</h4>
+                      <div className="flex items-center space-x-2">
+                        <label className="flex items-center text-xs">
+                          <input
+                            type="checkbox"
+                            className="mr-1"
+                            checked={clearAll}
+                            onChange={(e) => setClearAll(e.target.checked)}
+                          />
+                          Clear all
+                        </label>
+                        <button
+                          onClick={() => { clearAllNotifications(); setNotifications([]); }}
+                          className="p-1 rounded hover:bg-gray-100"
+                          title="Clear all"
+                        >
+                          <Trash2 className="h-4 w-4 text-gray-600" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <ul className="mt-2 max-h-48 overflow-auto">
+                      {notifications.length === 0 && (
+                        <li className="text-sm text-gray-500 py-2">No notifications</li>
+                      )}
+                      {notifications.map(n => (
+                        <li key={n.id} className="flex items-start justify-between py-2 border-b last:border-b-0">
+                          <div className="text-sm pr-2">{n.village ? (<><span className="font-semibold">{n.village}:</span> </>) : null}{n.text}</div>
+                          <div className="flex items-center">
+                            <button onClick={() => handleRemove(n.id)} className="text-xs text-gray-500 hover:text-gray-800">Dismiss</button>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            <button onClick={toggleMenu} className="text-gray-600 hover:text-green-600 focus:outline-none">
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
