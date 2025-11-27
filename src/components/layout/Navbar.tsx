@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, LogIn, Bell, Trash2 } from 'lucide-react';
-import { getNotifications, removeNotification, clearNotifications as clearAllNotifications, Notification as NotifType } from '../../services/notificationService';
+import { getNotifications, removeNotification, clearNotifications as clearAllNotifications, seedSampleNotifications, Notification as NotifType } from '../../services/notificationService';
 import Logo from '../shared/Logo';
 
 const Navbar = () => {
@@ -12,7 +12,14 @@ const Navbar = () => {
   const [clearAll, setClearAll] = useState(false);
 
   useEffect(() => {
-    setNotifications(getNotifications());
+    const list = getNotifications();
+    if (list.length === 0) {
+      // seed some sample notifications for first-time users
+      seedSampleNotifications();
+      setNotifications(getNotifications());
+    } else {
+      setNotifications(list);
+    }
   }, []);
 
   useEffect(() => {
