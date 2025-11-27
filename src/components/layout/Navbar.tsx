@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, LogIn } from 'lucide-react';
+import { Menu, X, LogIn, Bell } from 'lucide-react';
 import Logo from '../shared/Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHindi, setIsHindi] = useState(false);
+  const [isNotifOpen, setIsNotifOpen] = useState(false);
+
+  // sample notifications (replace with real data later)
+  const notifications = [
+    { id: 1, text: 'New weather alert for your area' },
+    { id: 2, text: 'Planner updated for Rice crop' },
+  ];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -45,6 +52,34 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
+            {/* Notification icon */}
+            <div className="relative">
+              <button
+                onClick={() => setIsNotifOpen(!isNotifOpen)}
+                aria-label="Notifications"
+                className="p-2 rounded-full text-green-900 hover:text-green-600 transition focus:outline-none"
+              >
+                <Bell className="h-5 w-5" />
+                {notifications.length > 0 && (
+                  <span className="absolute -top-1 -right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-600 rounded-full">
+                    {notifications.length}
+                  </span>
+                )}
+              </button>
+
+              {isNotifOpen && (
+                <div className="absolute right-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg z-50">
+                  <div className="p-2">
+                    <h4 className="text-sm font-semibold mb-2">Notifications</h4>
+                    <ul>
+                      {notifications.map(n => (
+                        <li key={n.id} className="text-sm py-1 border-b last:border-b-0">{n.text}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
             <Link to="/" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Home</Link>
             <Link to="/about" className="px-3 py-2 text-green-900 hover:text-green-600 transition">About</Link>
             <Link to="/weather" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Weather</Link>
@@ -65,6 +100,7 @@ const Navbar = () => {
               Login / Signup
             </Link>
           </div>
+          
           
           <div className="md:hidden flex items-center">
             <button onClick={toggleMenu} className="text-gray-600 hover:text-blue-600 focus:outline-none">
