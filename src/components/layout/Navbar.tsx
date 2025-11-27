@@ -73,7 +73,7 @@ const Navbar = () => {
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-4">
             <Link to="/" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Home</Link>
             <Link to="/about" className="px-3 py-2 text-green-900 hover:text-green-600 transition">About</Link>
             <Link to="/weather" className="px-3 py-2 text-green-900 hover:text-green-600 transition">Weather</Link>
@@ -146,7 +146,7 @@ const Navbar = () => {
             
             <Link 
               to="/login" 
-              className="ml-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition flex items-center"
+              className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition flex items-center"
             >
               <LogIn className="mr-1 h-4 w-4" />
               Login / Signup
@@ -234,7 +234,7 @@ const Navbar = () => {
             {isHindi ? 'English' : 'हिंदी'}
           </button>
           
-          <Link to="/login" className="px-3 py-2 text-green-600 font-medium hover:text-green-800 mt-2 inline-flex items-center">
+          <Link to="/login" className="px-3 py-2 mx-3 text-green-600 font-medium hover:text-green-800 mt-2 inline-flex items-center">
             <LogIn className="mr-1 h-4 w-4" />
             Login / Signup
           </Link>
