@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="relative py-16 bg-gray-50">
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-50"
         style={{ 
           backgroundImage: "url('https://images.pexels.com/photos/2749165/pexels-photo-2749165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"
         }}

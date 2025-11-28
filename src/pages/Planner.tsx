@@ -139,7 +139,7 @@ const Planner = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
-              <div className="bg-green-600 px-6 py-8 text-white">
+              <div className="bg-gradient-to-r from-green-500 to-blue-700 px-6 py-8 text-white">
                 <h2 className="text-3xl font-bold text-center">Irrigation Planner</h2>
                 <p className="mt-2 text-center text-blue-100">
                   Get customized irrigation recommendations based on your crop, soil, and local weather

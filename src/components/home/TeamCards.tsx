@@ -35,7 +35,7 @@ const TeamCards: React.FC = () => {
           {team.map((m) => (
             <div
               key={m.id}
-              className="bg-black border-2 rounded-lg p-8 text-center shadow-lg border border-green-400 
+              className="bg-[#E0FFCC] border-2 rounded-lg p-8 text-center shadow-lg border-green-400 
                         transform transition duration-300 hover:scale-105"
             >
               <div className="flex justify-center mb-4">
@@ -44,13 +44,13 @@ const TeamCards: React.FC = () => {
                 </div>
               </div>
 
-              <h3 className="text-xl font-semibold text-white mb-1">{m.name}</h3>
-              <p className="text-green-400 mb-4 text-sm">{m.email}</p>
+              <h3 className="text-xl font-semibold text-green-900 mb-1">{m.name}</h3>
+              <p className="text-green-800 mb-4 text-sm">{m.email}</p>
 
               <a
                 href={m.linkedin}
                 aria-label={`Open ${m.name} LinkedIn`}
-                className="inline-flex items-center justify-center text-green-400 hover:text-green-300"
+                className="inline-flex items-center justify-center text-green-800 hover:text-green-600"
                 target="_blank"
                 rel="noreferrer"
               >
