@@ -2,7 +2,7 @@
 
 ![Image](https://github.com/user-attachments/assets/7ee34e82-23f4-4af2-adf4-23b6b5efc0eb)
 
-JalVaani is an innovative AgriTech solution developed by Team कृषिVerse for the AGRITECH HACK 2025. Our mission is to empower farmers with data-driven insights for smarter, more sustainable irrigation, ultimately saving water, improving yield, and promoting better planning for every drop. [cite: 2, 3]
+JalVaani is an innovative AgriTech solution developed by Team कृषिVerse for the AGRITECH HACK 2025. Our mission is to empower farmers with data-driven insights for smarter, more sustainable irrigation, ultimately saving water, improving yield, and promoting better planning for every drop.
 
 ## Table of Contents
 
@@ -17,28 +17,28 @@ JalVaani is an innovative AgriTech solution developed by Team कृषिVerse 
 
 ## Introduction
 
-Welcome to JalVaani – your companion for smarter, sustainable irrigation. [cite: 2] We are a student-led tech team passionate about merging agriculture and innovation. [cite: 4] JalVaani is our step toward empowering farmers with smart tools and weather-based planning to transform traditional irrigation practices. [cite: 5]
+Welcome to JalVaani – your companion for smarter, sustainable irrigation. We are a student-led tech team passionate about merging agriculture and innovation. JalVaani is our step toward empowering farmers with smart tools and weather-based planning to transform traditional irrigation practices.
 
 ## The Problem
 
 Farmers in India face significant challenges related to irrigation:
-* **Reliance on Intuition:** Often, watering crops is based on fixed schedules or intuition rather than precise needs. [cite: 6]
-* **Water Wastage & Degradation:** Over-irrigation leads to significant water wastage and contributes to soil degradation. [cite: 7]
-* **Poor Yield & Crop Loss:** Conversely, under-irrigation results in poor crop yield and substantial crop loss. [cite: 7]
-* **Lack of Awareness:** Limited knowledge about local weather patterns negatively impacts effective water planning. [cite: 8]
-* **Limited Access:** Many farmers have limited access to government schemes and modern scientific irrigation methods. [cite: 8]
-* **Economic Loss:** Excess irrigation wastes money and reduces income. [cite: 13]
-* **Environmental Impact:** Waterlogging erodes soil, reduces fertility, and depletes water sources, stressing ecosystems. [cite: 14]
-* **Labor & Time:** Manual checks for irrigation consume significant time and can lead to farmer burnout. [cite: 13]
+* **Reliance on Intuition:** Often, watering crops is based on fixed schedules or intuition rather than precise needs. 
+* **Water Wastage & Degradation:** Over-irrigation leads to significant water wastage and contributes to soil degradation.
+* **Poor Yield & Crop Loss:** Conversely, under-irrigation results in poor crop yield and substantial crop loss.
+* **Lack of Awareness:** Limited knowledge about local weather patterns negatively impacts effective water planning.
+* **Limited Access:** Many farmers have limited access to government schemes and modern scientific irrigation methods. 
+* **Economic Loss:** Excess irrigation wastes money and reduces income. 
+* **Environmental Impact:** Waterlogging erodes soil, reduces fertility, and depletes water sources, stressing ecosystems.
+* **Labor & Time:** Manual checks for irrigation consume significant time and can lead to farmer burnout.
 
-In India, approximately 14% of annual crop loss is attributed to mismanagement, and less than 30% of small farmers are aware of relevant government schemes[cite: 10].
+In India, approximately 14% of annual crop loss is attributed to mismanagement, and less than 30% of small farmers are aware of relevant government schemes.
 
 ## Our Solution: JalVaani
 
-JalVaani offers an intelligent irrigation planner and weather forecasting tool designed to address these challenges head-on. [cite: 5, 16, 17]
+JalVaani offers an intelligent irrigation planner and weather forecasting tool designed to address these challenges head-on.
 
 **Key Features (Inferred from impact/screenshots):**
-* **Automated Weather-Linked Irrigation Planning:** Provides precise weekly irrigation plans based on real-time and forecasted weather conditions. [cite: 10, 16]
+* **Automated Weather-Linked Irrigation Planning:** Provides precise weekly irrigation plans based on real-time and forecasted weather conditions.
 * **Optimized Water Usage:** Aims to reduce water consumption by 25-40% per acre per day. [cite: 10]
 * **Improved Crop Yield Consistency:** Seeks to increase yield consistency by 15-25% by preventing over or under-watering. [cite: 10]
 * **Predictive Scheduling:** Helps reduce crop loss due to mismanagement through intelligent, predictive scheduling. [cite: 10]
