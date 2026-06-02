@@ -6,7 +6,7 @@ const team = [
     id: 1,
     name: 'Udisha Verma ',
     email: 'udisha verma13@gmail.com',
-    image: 'https://media.licdn.com/dms/image/v2/D5603AQEETndYD_Z_SQ/profile-displayphoto-shrink_400_400/B56ZeSncVJHEAg-/0/1750511503609?e=2147483647&v=beta&t=4IYaXDrWAN3eZyzD0tdVGhImEhq5rVts47G1FYAI1Oc',
+    image: 'https://media.licdn.com/dms/image/v2/D5603AQFGo41oVNLr3Q/profile-displayphoto-crop_800_800/B56ZzzH87JJgAI-/0/1773605483099?e=1781740800&v=beta&t=H64eekeSXFVy9W5iWU6yYIuPVDAe6V1iKxsXzcEm2ws',
     linkedin: 'https://www.linkedin.com/in/udisha-verma/'
   },
   {
@@ -20,7 +20,7 @@ const team = [
     id: 3,
     name: 'Vidushi Srivastava',
     email: 'vidushi.official012@gmail.com',
-    image: 'https://media.licdn.com/dms/image/v2/D5603AQH2PpSWJrGAmg/profile-displayphoto-shrink_200_200/B56ZTkU5ShHEAY-/0/1738997485908?e=1766016000&v=beta&t=qAvYdbn-zxZTLsd8GGwl1hVeDTaZ976AtjJeFxKVxw4',
+    image: 'https://media.licdn.com/dms/image/v2/D5603AQH2PpSWJrGAmg/profile-displayphoto-shrink_800_800/B56ZTkU5ShHEAc-/0/1738997485916?e=1781740800&v=beta&t=OceaZKgQgd3Jl8ggcnxpxGHTAlNZeYPlBLibHlnjnPc',
     linkedin: 'https://www.linkedin.com/in/srivastava-vidushi/'
   }
 ];
