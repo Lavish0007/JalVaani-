@@ -54,7 +54,7 @@ export const fetchWeatherData = async (city: string): Promise<WeatherData> => {
 export const fetchForecast = async (city: string): Promise<ForecastDay[]> => {
   try {
     const response = await fetch(
-      `${API_BASE_URL}/forecast.json?key=${API_KEY}&q=${city}&days=5&aqi=no`
+      `${API_BASE_URL}/forecast.json?key=${API_KEY}&q=${city}&days=3&aqi=no`
     );
     
     if (!response.ok) {
