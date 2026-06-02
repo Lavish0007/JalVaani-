@@ -39,13 +39,13 @@ JalVaani offers an intelligent irrigation planner and weather forecasting tool d
 
 **Key Features (Inferred from impact/screenshots):**
 * **Automated Weather-Linked Irrigation Planning:** Provides precise weekly irrigation plans based on real-time and forecasted weather conditions.
-* **Optimized Water Usage:** Aims to reduce water consumption by 25-40% per acre per day. [cite: 10]
-* **Improved Crop Yield Consistency:** Seeks to increase yield consistency by 15-25% by preventing over or under-watering. [cite: 10]
-* **Predictive Scheduling:** Helps reduce crop loss due to mismanagement through intelligent, predictive scheduling. [cite: 10]
-* **Local Notifications for Schemes:** Increases awareness among small farmers about relevant government schemes. [cite: 10]
-* **Reduced Disease Risk:** Less overwatering contributes to lower disease incidence. [cite: 15]
-* **Reduced Manual Work:** Automation significantly cuts down on manual effort required for irrigation management. [cite: 15]
-* **Cost Savings:** Smart scheduling and efficient resource use lead to reduced unnecessary costs. [cite: 15]
+* **Optimized Water Usage:** Aims to reduce water consumption by 25-40% per acre per day. 
+* **Improved Crop Yield Consistency:** Seeks to increase yield consistency by 15-25% by preventing over or under-watering. 
+* **Predictive Scheduling:** Helps reduce crop loss due to mismanagement through intelligent, predictive scheduling.
+* **Local Notifications for Schemes:** Increases awareness among small farmers about relevant government schemes.
+* **Reduced Disease Risk:** Less overwatering contributes to lower disease incidence.
+* **Reduced Manual Work:** Automation significantly cuts down on manual effort required for irrigation management.
+* **Cost Savings:** Smart scheduling and efficient resource use lead to reduced unnecessary costs. 
 
 ## Impact & Analytics
 
@@ -59,22 +59,22 @@ JalVaani predicts significant improvements in key agricultural metrics:
 | Crop loss due to mismanagement | ~14% annually in India     | ↓ by predictive scheduling         |
 | Awareness of schemes         | <30% of small farmers      | ↑ with local notifications         |
 
-*Data reference: ICAR 2023 report [cite: 11]*
+*Data reference: ICAR 2023 report
 
 Visual representation of predicted impacts:
-* **Water Usage:** Expected to decrease significantly (from 100% to ~60%). [cite: 15]
-* **Crop Yield:** Expected to increase substantially (from 100% to ~125%). [cite: 15]
-* **Disease Risk:** Expected to decrease (from 100% to ~80%). [cite: 15]
-* **Manual Work:** Expected to decrease (from 100% to ~60%). [cite: 15]
-* **Cost Saving:** Expected to increase (from 100% to ~125%). [cite: 15]
+* **Water Usage:** Expected to decrease significantly (from 100% to ~60%). 
+* **Crop Yield:** Expected to increase substantially (from 100% to ~125%).
+* **Disease Risk:** Expected to decrease (from 100% to ~80%). 
+* **Manual Work:** Expected to decrease (from 100% to ~60%). 
+* **Cost Saving:** Expected to increase (from 100% to ~125%).
 
 ## Team
 
-JalVaani is developed by Team कृषिVerse, comprising: [cite: 1]
-* Aditya Adarsh [cite: 1]
-* Lavish Patel [cite: 1]
-* Udisha Verma [cite: 1]
-* Vidushi Srivastava [cite: 1]
+JalVaani is developed by Team कृषिVerse, comprising: 
+* Aditya Adarsh 
+* Lavish Patel
+* Udisha Verma
+* Vidushi Srivastava
 
 
 ## Contact
