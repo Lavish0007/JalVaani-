@@ -81,8 +81,4 @@ JalVaani is developed by Team कृषिVerse, comprising:
 
 For any inquiries, collaborations, or support, please reach out to the team members listed above.
 
-## License
 
-[MIT License Placeholder - or specify actual license]
-
-This project is open-sourced under the [MIT License](LICENSE) (or other chosen license). See the `LICENSE` file for more details.
