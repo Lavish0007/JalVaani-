@@ -79,6 +79,6 @@ JalVaani is developed by Team कृषिVerse, comprising:
 
 ## Contact
 
-For any inquiries, collaborations, or support, please reach out to the team members listed above.
+For any inquiries, collaborations, or support, please reach out to the team members listed above..
 
 
