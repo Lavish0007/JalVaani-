@@ -17,7 +17,7 @@ JalVaani is an innovative AgriTech solution developed by Team कृषिVerse 
 
 ## Introduction
 
-Welcome to JalVaani – your companion for smarter, sustainable irrigation. We are a student-led tech team passionate about merging agriculture and innovation. JalVaani is our step toward empowering farmers with smart tools and weather-based planning to transform traditional irrigation practices.
+Welcome to JalVaani – your companion for smarter, sustainable irrigation. We are a student-led tech team passionate about merging agriculture and innovation. JalVaani is our step toward empowering farmers with smart tools and weather-based planning to transform traditional irrigation practices...
 
 ## The Problem
 
